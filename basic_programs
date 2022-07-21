@@ -21,4 +21,7 @@ from math import *
 sqrt(100)
 10.0
 
-==============
+==============errors=============
+
+with open("abc.txt") as f1:
+    pass

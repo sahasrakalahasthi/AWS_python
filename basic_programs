@@ -1,0 +1,24 @@
+============= functions ===========
+def add(x,y):
+    c=x+y
+    return c
+a=int(input())
+b=int(input())
+res=add(a,b)
+print(res)
+
+ #include"math.h" ----for userdefined header file in c lang
+
+=======importing methods========
+
+import math
+math.sqrt(100)
+10.0
+import math as m
+m.sqrt(100)
+10.0
+from math import *
+sqrt(100)
+10.0
+
+==============

@@ -56,4 +56,65 @@ n=int(input())
 res=perfect(n)
 print(res)
 
-=========
+
+import math as m
+def perfect(num):
+    sum=1
+    i=2
+    sq=int(m.sqrt(num))
+    while i!=sq:#for i in range(2,sqrt+1):
+        if(num%i==0):
+            sum=sum+i
+            sum+=num//i
+            print(i,num//i,sum)
+        i+=1
+    return sum==num
+t=int(input())
+for i in range(t):
+    n=int(input())
+    res=perfect(n)
+    print(res)
+  
+===========spy number============
+
+def spynumber(n):
+    sum=0
+    pro=1
+    while(n>0):
+        rem=n%10
+        sum=sum+rem
+        pro=pro*rem
+        n=n//10
+    if(sum==pro):
+        print("true")
+    else:
+        print("false")
+t=int(input())
+for i in range(t):
+    num=int(input())
+    res=spynumber(num)
+ 
+==============semiprime==============
+
+
+from math import *
+def semiprime(n):
+    ran=sqrt(n)
+    i=2
+    while(i<=ran):
+        c=0
+        if(n%i==0):
+            for j in range(2,i):
+                if(i%j==0):
+                    c=1
+            if(c==0):
+                for k in range(2,n//i):
+                    if((n//i)%k==0):
+                        c=1
+            if(c==0):
+                return True
+        i+=1
+    return False
+n=int(input())
+print(semiprime(n))
+
